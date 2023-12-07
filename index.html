@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consult Catalyst</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" crossorigin href="/assets/index-msrMHl9Y.css">
+  </head>
+  <body class="change-theme-two">
+    <div
+      class="grad1 h-[200px] w-[200px] absolute -z-[1] top-80 bg-[#20cfdf]"
+    ></div>
+    <div
+      class="grad2 h-[500px] w-[500px] absolute -z-[1] -right-48 -top-14 bg-[#0b018b]"
+    ></div>
+    <div
+      class="flex rounded-[50%] h-[700px] w-[700px] absolute z-[1] -right-52 -bottom-32 bg-[#c683a7] blur-[250px]"
+    ></div>
+
+    <!--container-->
+    <div class="w-[100vw] h-[100vh] mx-auto">
+      <header>
+        <nav
+          class="flex gap-10 sticky rounded-full text-2xl mt-5 flex-row items-center justify-evenly xl:mx-64 md:mx-20 sm:mx-5 p-2"
+        >
+          <li class="flex items-center flex-col">
+            <a
+              href="#home"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >Home</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+          <li class="flex items-center flex-col">
+            <a
+              href="#services"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >Services</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+          <li class="flex items-center flex-col">
+            <a
+              href="#about"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >About</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+
+          <li class="flex items-center flex-col">
+            <a
+              href="#feedback"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >Feedback</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+
+          <button
+            class="relative cursor-pointer top-1 z-[3] mb-3 right-3 hover:text-[#fec468] transition-all duration-[0.3s] ease-in-out"
+            id="theme-icon"
+          >
+            <i class="fa fa-sun-o change-theme"></i>
+          </button>
+        </nav>
+      </header>
+
+      <home
+        class="flex xl:flex-row md:flex-col-reverse sm:flex-col-reverse items-center justify-center lg:flex-row m-8 mt-44 gap-48"
+        id="home"
+      >
+        <div class="bg-transparent flex-col max-w-[700px]">
+          <h1 class="font-bold text-6xl font-custom capitalize">
+            <span class="Role"></span>
+          </h1>
+          <p class="capitalize text-xl mt-5 text-[#e1949c]">
+            welcome to consult Catalyst, your compass on the path for a
+            healthier tomorrow.
+          </p>
+        </div>
+
+        <!--image div -->
+        <div class="p-2 z-10">
+          <img
+            src="/assets/portrait-smiling-young-woman-doctor-healthcare-medical-worker-pointing-fingers-left-showing-clini-PhotoRoom.png-PhotoRoom-NdnMCxPW.png"
+            loading="lazy"
+            height="500px"
+            width="500px"
+          />
+        </div>
+      </home>
+
+      <services
+        class="flex flex-col justify-center items-center w-[90%] mt-20 gap-y-28"
+        id="services"
+      >
+        <h1
+          class="font-custom text-[#4ae2ef] relative text-3xl font-semibold justify-center items-center flex"
+        >
+          Services
+        </h1>
+
+        <h2 class="text-xl p-2">
+          Enter symptoms to know your disease and nearest Hospitals
+        </h2>
+        <div
+          class="flex bg-transparent w-[500px] h-[200px] flex-col justify-between"
+        >
+          <input
+            placeholder="Enter Your Name"
+            class="bg-transparent border-2 border-solid border-[#1f1140] rounded-2xl p-3"
+            required
+          />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            placeholder="Enter Your Number"
+            maxlength="10"
+            required
+            class="bg-transparent border-2 border-solid border-[#1f1140] rounded-2xl p-3"
+          />
+
+          <button class="button">next</button>
+        </div>
+
+        <!--Container-->
+        <div
+          class="flex flex-row items-center justify-between border border-solid relative -top-[21rem] -right-10 p-5 border-white w-[90%] opacity-0"
+        >
+          <!--card1-->
+          <div
+            class="flex flex-col relative h-[450px] rounded-2xl border-[#ffffff30] items-center justify-around bg-[#030101de] backdrop-blur-lg text-white border-2 px-12 py-10 z-0"
+          >
+            <label for="symptoms">Enter symptoms (comma-separated):</label>
+            <input
+              type="text"
+              id="symptoms"
+              placeholder="e.g., fever, headache, cough"
+              class="bg-transparent border-2 border-solid border-[#1f1140] rounded-2xl p-2"
+            />
+          </div>
+          <div
+            class="flex flex-col relative h-[450px] rounded-2xl border-[#ffffff30] items-center justify-around bg-[#030101de] backdrop-blur-lg text-white border-2 px-12 py-10 z-0"
+          >
+            you have these diseases
+          </div>
+          <div
+            class="flex flex-col relative h-[450px] rounded-2xl border-[#ffffff30] items-center justify-around bg-[#030101de] backdrop-blur-lg text-white border-2 px-12 py-10 z-0"
+          ></div>
+
+          <div id="result"></div>
+        </div>
+      </services>
+
+      <about class="flex flex-col w-[90%] mt-20" id="about">
+        <h1
+          class="font-custom text-[#4ae2ef] relative text-3xl font-semibold m-10 justify-center items-center flex"
+        >
+          About
+        </h1>
+        <div
+          class="flex xl:flex-row lg:flex-row md:flex-col-reverse sm:flex-col-reverse items-center justify-center mt-20 gap-60"
+        >
+          <img
+            src="/assets/WhatsApp_Image_2023-11-27_at_21.51.43_34600bc9-removebg-Kk4WnPgF.png"
+            height="500px"
+            width="500px"
+            loading="lazy"
+          />
+
+          <div
+            class="w-[450px] h-[450px] bg-transparent border-2 border-solid border-[#1f1140] rounded-3xl relative flex"
+          >
+            <h1 class="font-custom text-4xl font-bold p-2 m-5">Ayush Kumar</h1>
+          </div>
+        </div>
+
+        <div
+          class="flex xl:flex-row lg:flex-row md:flex-col-reverse sm:flex-col-reverse items-center justify-center mt-20 gap-48"
+        >
+          <div
+            class="w-[450px] h-[450px] bg-transparent border-2 border-solid border-[#1f1140] rounded-3xl relative flex ml-20"
+          >
+            <h1 class="font-custom text-4xl font-bold p-2 m-5">Mansi Goel</h1>
+          </div>
+          <img
+            src="/assets/WhatsApp Image 2023-12-07 at 23.06.57_05e12a38-PhotoRoom.png-PhotoRoom-Uzxh_1j2.png"
+            height="350px"
+            width="500px"
+            loading="lazy"
+          />
+        </div>
+      </about>
+
+      <div
+        class="flex rounded-[50%] h-[200px] w-[200px] relative z-[1] right-3 bg-[#0b018b] blur-[130px]"
+      ></div>
+      <div
+        class="flex rounded-[50%] h-[300px] w-[300px] relative z-[1] bottom-6x bg-[#c683a7] blur-[160px]"
+      ></div>
+      <div
+        class="grad1 h-[150px] w-[150px] relative -z-[1] -right-16 bg-[#20cfdf] blur-[140px]"
+      ></div>
+
+      <feedback
+        class="flex flex-col justify-center items-center w-[90%] mt-20"
+        id="feedback"
+      >
+        <h1
+          class="font-custom text-[#4ae2ef] relative text-3xl font-semibold m-10 justify-center items-center flex"
+        >
+          Feedback
+        </h1>
+        <div class="flex flex-col gap-10 items-center justify-center">
+          <input
+            type="text"
+            id="name"
+            name="Myname"
+            required
+            placeholder="Enter Your Name"
+            class="bg-transparent border-2 border-solid border-[#1f1140] rounded-2xl p-2"
+          />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            required
+            placeholder="Enter the Feedback Message"
+            class="bg-transparent border-2 border-solid border-[#1f1140] rounded-2xl p-2"
+          ></textarea>
+          <button
+            type="submit"
+            class="btn font-custom"
+            id="submit-btn"
+            onclick="sendMessage()"
+          >
+            Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
+          </button>
+
+          <div>
+            <span data-sendMsg class="popup"></span>
+          </div>
+        </div>
+      </feedback>
+
+      <h1
+        class="xl:text-6xl lg:text-6xl md:text-3xl tracking-widest font-bold font-custom p-2 relative flex top-5 select-none -z-[1]"
+      >
+        Consult Catalyst
+      </h1>
+
+      <footer
+        class="w-[100%] h-[250px] bg-black z-10 flex flex-col justify-between items-center"
+      >
+        <ul
+          class="flex xl:flex-row lg:flex-row sm:flex-col md:flex-col justify-center relative gap-x-10 top-5 text-white text-xl"
+        >
+          <li class="flex items-center flex-col">
+            <a
+              href="#home"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >Home</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+          <li class="flex items-center flex-col">
+            <a
+              href="#services"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >Services</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+          <li class="flex items-center flex-col">
+            <a
+              href="#about"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >About</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+
+          <li class="flex items-center flex-col">
+            <a
+              href="#feedback"
+              class="hover:text-[#de9da3] transition-colors duration-[0.2s] ease-linear"
+              >Feedback</a
+            >
+            <!-- <div class="small-bar rounded-2xl"></div> -->
+          </li>
+        </ul>
+
+        <p class="p-2 mb-10 text-xs text-[#c6c3c3b9]">
+          © Ayush Kumar and Mansi Goel. All rights reserved
+        </p>
+      </footer>
+
+      <div id="arrow" class="rounded-xl">
+        <i class="fa-solid fa-up-long"></i>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
